@@ -438,7 +438,6 @@ Upload to GitHub Pages for free hosting.
 ```
 **style.css**
 ```css
-
 /* GLOBAL STYLING */
 
 * {
@@ -639,13 +638,14 @@ section {
 /* CATEGORY SECTION */
 
 .category-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .category-card {
     position: relative;
+    flex: 1 1 calc(50% - 15px);
     height: 380px;
     border-radius: 18px;
     overflow: hidden;
@@ -692,12 +692,14 @@ section {
 }
 
 .product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
 .product-card {
+    flex: 1 1 calc(25% - 19px);
+    min-width: 200px;
     background: white;
     border-radius: 15px;
     overflow: hidden;
@@ -866,13 +868,14 @@ section {
 }
 
 .contact-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin: 40px 0;
 }
 
 .contact-box {
+    flex: 1 1 calc(33.33% - 14px);
     background: white;
     padding: 30px 15px;
     border-radius: 12px;
@@ -956,8 +959,8 @@ footer p {
         justify-content: center;
     }
 
-    .product-container {
-        grid-template-columns: repeat(2, 1fr);
+    .product-card {
+        flex-basis: calc(50% - 13px);
     }
 
     .hero h1 {
@@ -994,10 +997,10 @@ footer p {
         flex-wrap: wrap;
     }
 
-    .category-container,
-    .product-container,
-    .contact-details {
-        grid-template-columns: 1fr;
+    .category-card,
+    .product-card,
+    .contact-box {
+        flex-basis: 100%;
     }
 
     .category-card {
@@ -1034,6 +1037,7 @@ footer p {
         padding: 50px 6%;
     }
 }
+
 ```
 
 ## OUTPUT
